@@ -1,6 +1,16 @@
 ﻿{
   "version": "1.0.0-*",
 
+  "packOptions": {
+    "description": "Useful integrations for Espalier.Validate in ASP.NET Core MVC projects.",
+    "authors": [ "Jereme Evans" ],
+    "licenseUrl": "https://github.com/jeremeevans/Espalier.Validate.ASPNETCore/blob/master/LICENSE.md",
+    "projectUrl": "https://github.com/jeremeevans/Espalier.Validate.ASPNETCore/",
+    "tags": [ "validation", "ASP.NET Core MVC" ],
+    "requireLicenseAcceptance": false,
+    "owners": [ "Jereme Evans" ]
+  },
+
   "dependencies": {
     "Espalier.Validate": "1.0.4",
     "Microsoft.AspNetCore.Mvc": "1.1.0",
@@ -10,6 +20,12 @@
   "frameworks": {
     "netstandard1.6": {
       "imports": "dnxcore50"
+    },
+    "netcoreapp1.1": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8"
+      ]
     }
   }
 }

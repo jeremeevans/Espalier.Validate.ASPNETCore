@@ -1,15 +1,11 @@
 @echo Off
 
-dotnet restore .\Espalier.Validate.Tests\project.json
-dotnet restore .\Espalier.Validate\project.json
+dotnet restore .\Espalier.Validate.ASPNETCore\project.json
 
-dotnet test .\Espalier.Validate.Tests\
+dotnet build .\Espalier.Validate.ASPNETCore\project.json --configuration Release
 if not "%errorlevel%"=="0" goto failure
 
-dotnet build .\Espalier.Validate\project.json --configuration Release
-if not "%errorlevel%"=="0" goto failure
-
-dotnet pack .\Espalier.Validate\project.json --configuration release
+dotnet pack .\Espalier.Validate.ASPNETCore\project.json --configuration release
 
 :success
 exit 0
